@@ -15,11 +15,11 @@ The following four commands allow to run GA, GR, FRSQ, MRSQ on specific networks
 
 `java run_experiments GA "input_file" "value_of_C"`
 
-`java run_experiments GR "input_file" "value_of_R`
+`java run_experiments GR "input_file" "value_of_R"`
 
-`java run_experiments FRSQ "input_file" "value_of_R`
+`java run_experiments FRSQ "input_file" "value_of_R"`
 
-`java run_experiments MRSQ "input_file" "value_of_C` 
+`java run_experiments MRSQ "input_file" "value_of_C"` 
 
 "input_file" - contains a description of a three-layered leaf-spine topology in the following format: 
 the first line contains the number of spines, the number of leafs, and the number of servers connected with a single leaf;
