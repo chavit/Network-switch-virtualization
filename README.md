@@ -24,7 +24,7 @@ The following four commands allow to run GA, GR, FRSQ, MRSQ on specific networks
 "input_file" - contains a description of a three-layered leaf-spine topology in the following format: 
 the first line contains the number of spines, the number of leafs, and the number of servers connected with a single leaf;
 the second line contains source link capacities; the third line contains destination link capacities; 
-each of the next lines contains two number `u` and `v` meaning that server `u` can send packets to server `v`. (see `sample_input.txt` for example).
+each of the next lines contains two number `u` and `v` meaning that server `u` can send packets to server `v` (see `sample_input.txt` for example).
 
 Each of these four commands prints the resulting network and representing switch into the file `result.txt`. 
 The instance of  `result.txt` in the repository was obtained by the following command:
