@@ -50,9 +50,9 @@ public class Main {
             }
         }
 
-        printTable(incr, tableQueue, "The value of Q(S) for S representing networks produced by algorithms.GA(G, C) (Fig.9a)\n" +
+        printTable(incr, tableQueue, "The value of Q(S) for S representing networks produced by GA(G, C) (Fig.9a).\n" +
                 "cout: 15000, 16000, 17000, 18000, 19000, 20000", "C");
-        printTable(incr, tableSum, "The value of B(S) for S representing networks produced by algorithms.GA(G, C) (Fig.9b)\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "C");
+        printTable(incr, tableSum, "The value of B(S) for S representing networks produced by GA(G, C) (Fig.9b).\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "C");
 
     }
 
@@ -83,8 +83,8 @@ public class Main {
             }
         }
 
-        printTable(incr, tableQueue, "The value of Q(S) for S representing networks produced by algorithms.GR(G, C) (Fig.9c)\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "R");
-        printTable(incr, tableSum, "The value of B(S) for S representing networks produced by algorithms.GR(G, C) (Fig.9d)\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "R");
+        printTable(incr, tableQueue, "The value of Q(S) for S representing networks produced by GR(G, C) (Fig.9c).\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "R");
+        printTable(incr, tableSum, "The value of B(S) for S representing networks produced by GR(G, C) (Fig.9d).\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "R");
 
     }
 
@@ -112,7 +112,7 @@ public class Main {
             }
         }
 
-        printTable(incr, tableRed, "The value of R returned by algorithms.MRSQ(G, C) (Fig.9e)\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "C");
+        printTable(incr, tableRed, "The value of R returned by MRSQ(G, C) (Fig.9e).\ncout: 15000, 16000, 17000, 18000, 19000, 20000", "C");
 
     }
 
@@ -140,26 +140,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        int n = 16, t = 9;
-        Random rnd = new Random(223);
-        boolean[][] canSend = new boolean[n*t][n*t];
-
-//        for (int i = 0; i  < t*n; i++) {
-//            for (int id = 0; id < 2; id++) {
-//                int prev = rnd.nextInt(t * n);
-//                while (canSend[prev][i] || prev == i) {
-//                    prev = rnd.nextInt(t * n);
-//                }
-//                canSend[prev][i] = true;
-//                System.err.println((prev+1)+" "+(i+1));
-//            }
-//        }
-//
-//        System.exit(0);
-
-
-        args = new String[]{"GA", "sample_input.txt", "1000"};
-
         if (args.length == 1 && args[0].equals("run_all_experiments")) {
             writer = new PrintWriter("result_all.txt");
             Locale.setDefault(Locale.US);
