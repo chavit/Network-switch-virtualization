@@ -14,6 +14,8 @@ public class LeafSpine {
 
     public long[] capacityGap;
 
+    public long initCap;
+
     public LeafSpine(int n, int t, int k, int sumCapSource, int sumCapDestination) {
         this.n = n;
         this.t = t;
@@ -78,6 +80,21 @@ public class LeafSpine {
             spinToLeaf[i] = (spinToLeaf[i] + k - 1) / k + (t - 2) - (t - 2) / k;
         }
 
+        initCap = 0;
+        for (long l : leafToSpin) {
+            initCap += l*k;
+        }
+        for (long l : spinToLeaf) {
+            initCap += l*k;
+        }
+        for (long l : capSource)  {
+            initCap += l;
+        }
+        for (long l : capDestination) {
+            initCap += l;
+        }
+
+
         for (int i = 0; i < t*n; i++) {
             capacityGap[i] = - capDestination[i];
         }
@@ -91,6 +108,10 @@ public class LeafSpine {
         }
 
         verify_consistency();
+    }
+
+    public long getInitCapacity() {
+        return initCap;
     }
 
     private void verify_consistency() {
